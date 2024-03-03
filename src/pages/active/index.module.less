@@ -1,0 +1,101 @@
+.container {  
+  position: relative;
+  :global{
+    .main{
+      position: relative;  
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+      img{
+        border-radius: 50%;
+        width: 600px;
+        height: 600px;
+        object-fit: cover;
+        position: absolute;  
+        left: 400px;  
+        top: -600px;  
+      }
+      .ani {  
+        top: 0;
+        &:local{
+          animation: uptodown 6s forwards;  
+        }
+      }
+    } 
+    .leftComMain{
+      position: absolute;  
+      overflow: hidden;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      left: 30px;
+      z-index: 2;
+    } 
+    .botTit{
+      .msg.one{
+        color: #ffc638;
+        text-align: center;
+        position: fixed;
+        bottom: 100px;
+        left: 55%;
+        margin-left: -500px;
+        height: 100px;
+        width: 1000px;
+        font-family: cursive;
+        font-size: 50px;
+        font-weight: 600;
+        opacity: 0;
+        animation-delay: .5s;
+        animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+        animation-fill-mode: forwards;
+        &:local{
+          animation: msgShowHide 3s forwards;
+        }
+      }
+      .msg.one >span:nth-child(1){
+        font-size: 20px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 2px;
+      }
+      .msg.one >span:nth-child(2){
+        font-size: 50px;
+        font-weight: 600;
+      }
+    } 
+  }
+}  
+
+@keyframes uptodown {  
+  0% {  
+    transform: translateY(-100%);  
+    opacity: 0;  
+  }  
+  20% {  
+    transform: translateY(0);  
+    opacity: 0.8;  
+  }
+  50% {  
+    transform: translateY(0);  
+    opacity: 0.9;  
+  }
+  70% {  
+    transform: translateY(0);  
+    opacity: 1;  
+  }  
+  100% {  
+    opacity: 0;  
+  }  
+}
+
+@keyframes msgShowHide {
+  0%{
+    opacity: 0;
+    transform: scale(.7);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

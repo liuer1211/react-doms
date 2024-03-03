@@ -1,0 +1,228 @@
+.indexMain{
+  position: relative;
+  color: #fff;
+  :global{
+    .model{
+      width: 5000px;
+      height: 2000px;
+      >div{
+        position: absolute;
+      }
+      .star{
+        left: 300px;
+        top: 100px;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 4px;
+        .par{
+          height: 100%;
+          width: 100%;
+          position: relative;
+          span{
+            position: absolute;
+            font-family: cursive;
+            writing-mode: vertical-lr; 
+            color: #fff;
+            font-size: 18px;
+            border: 1px solid #fff;
+            padding: 4px;
+            border-radius: 4px;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &:nth-child(2){
+          left: 100px;
+          top: 300px;
+          width: 110px;
+          height: 110px;
+        }
+        &:nth-child(3){
+          left: 500px;
+          top: 100px;
+          width: 100px;
+          height: 100px;
+          span{
+            color: #f5ca2d;
+            border: 1px solid #f5ca2d;
+            font-size: 16px;
+          }
+        }
+        &:nth-child(4){
+          left: 700px;
+          top: 100px;
+          width: 90px;
+          height: 90px;
+          span{
+            color: #f5ca2d;
+            border: 1px solid #f5ca2d;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .bgimg{
+      position: absolute;
+      width: 2200px;
+      height: 1000px;
+      z-index: 99;
+      opacity: .3;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .bg{
+      background-image: linear-gradient(to right, #9f8e6e, rgb(193 169 126), #a9946f);  
+      width: 2200px;
+      height: 1000px;
+      position: relative;
+      >div{
+        position: absolute;
+        color:#000;
+        font-weight: 700;
+        font-size: 22px;
+        font-family: cursive;
+        &:nth-child(1){
+          font-size: 28px;
+          left: 140px;
+          top: 100px;
+        }
+        &:nth-child(2){
+          left: 30px;
+          top: 200px;
+        }
+        &:nth-child(3){
+          left: 340px;
+          top: 105px;
+        }
+        &:nth-child(4){
+          left: 440px;
+          top: 105px;
+        }
+        &:nth-child(5){
+          left: 540px;
+          top: 105px;
+        }
+        &:nth-child(6){
+          left: 280px;
+          top: 200px;
+        }
+
+        &:nth-child(7){
+          left: 480px;
+          top: 300px;
+        }
+        &:nth-child(8){
+          left: 580px;
+          top: 300px;
+        }
+
+        &:nth-child(9){
+          left: 30px;
+          top: 500px;
+        }
+        &:nth-child(10){
+          left: 220px;
+          top: 500px;
+        }
+        &:nth-child(11){
+          left: 220px;
+          top: 400px;
+        }
+        &:nth-child(12){
+          left: 320px;
+          top: 400px;
+        }
+        &:nth-child(13){
+          left: 420px;
+          top: 400px;
+        }
+        &:nth-child(14){
+          left: 580px;
+          top: 400px;
+        }
+
+        &:nth-child(15){
+          left: 680px;
+          top: 400px;
+        }
+        &:nth-child(16){
+          left: 760px;
+          top: 350px;
+        }
+        &:nth-child(17){
+          left: 760px;
+          top: 450px;
+        }
+
+        &:nth-child(18){
+          left: 860px;
+          top: 450px;
+        }
+        &:nth-child(19){
+          left: 960px;
+          top: 450px;
+        }
+        &:nth-child(20){
+          left: 1060px;
+          top: 450px;
+        }
+
+        &:nth-child(21){
+          left: 1260px;
+          top: 450px;
+        }
+        &:nth-child(22){
+          left: 1360px;
+          top: 450px;
+        }
+        &:nth-child(23){
+          left: 1460px;
+          top: 450px;
+        }
+
+        &:nth-child(24){
+          left: 1560px;
+          top: 450px;
+        }
+        &:nth-child(25){
+          left: 1680px;
+          top: 450px;
+        }
+        &:nth-child(26){
+          left: 1580px;
+          top: 400px;
+        }
+        &:nth-child(27){
+          left: 1580px;
+          top: 520px;
+        }
+        &:nth-child(28){
+          left: 1580px;
+          top: 580px;
+        }
+        &:nth-child(29){
+          left: 1580px;
+          top: 640px;
+        }
+      }
+    }
+
+    .fixed{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      z-index: -1;
+    }
+  }
+}
+

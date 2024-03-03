@@ -1,0 +1,408 @@
+.main{
+  position: relative;
+  font-family: cursive;
+  writing-mode: vertical-lr; 
+  font-size: 50px;
+  color: #ffc638ed;
+  :global{
+    .first{
+      &.first{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+      div{
+        &:local{
+          animation: showNode 2s;
+        }
+      }
+    }
+    .left{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100px;
+    }
+    .right{
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      height: 100vh;
+      width: 100px;
+    }
+  }
+}
+@keyframes showNode {  
+  0% {  
+    opacity: 0;  
+  }  
+  100% {  
+    opacity: 1;  
+  }  
+}
+
+.cover{
+  :global{
+    .msg.two >div{
+      position: fixed;
+      top: 40%;
+      left: 55%;
+      margin-top: -300px;
+      margin-left: -500px;
+      height: 600px;
+      width: 1000px;
+    }
+    .msg.two >div img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      object-fit: cover;
+      opacity: 0;
+    }
+    .msg.two >div img.top{
+      &:local{
+        animation: msgShowHideImgTop 8s forwards;
+      }
+      animation-delay: .5s;
+      animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+      animation-fill-mode: forwards;
+    }
+    .msg.two >div img.bot{
+      &:local{
+        animation: msgShowHideImgBot 8s forwards;
+      }
+      animation-delay: .5s;
+      animation-timing-function: cubic-bezier(0.45, 0.44, 0.45, 0.46);
+      animation-fill-mode: forwards;
+    }
+    .msg.two >div img.img1{
+      left: 0;
+      top: 0;
+    }
+    .msg.two >div img.img2{
+      left: 101px;
+      top: 200px;
+    }
+    .msg.two >div img.img3{
+      left: 201px;
+      top: 0;
+    }
+    .msg.two >div img.img4{
+      left: 301px;
+      top: 200px;
+    }
+    .msg.two >div img.img5{
+      left: 401px;
+      top: 0;
+    }
+    .msg.two >div img.img6{
+      left: 501px;
+      top: 200px;
+    }
+    .msg.two >div img.img7{
+      left: 601px;
+      top: 0;
+    }
+    .msg.two >div img.img8{
+      left: 701px;
+      top: 200px;
+    }
+    .msg.two >div img.img9{
+      left: 801px;
+      top: 0;
+    }
+    .msg.two >div img.img10{
+      left: 901px;
+      top: 200px;
+    }
+  }
+}
+
+@keyframes msgShowHideImgTop {
+  0%{
+    opacity: 0;
+    top: 0;
+  }
+  10%{
+    opacity: 0.5;
+  }
+  20%{
+    opacity: 1;
+    top: 80px;
+  }
+  30%{
+    opacity: 1;
+    top: 80px;
+  }
+  40%{
+    opacity: 1;
+    top: 80px;
+  }
+  50%{
+    opacity: 1;
+    top: 80px;
+  }
+  60%{
+    opacity: 1;
+    top: 80px;
+  }
+  70%{
+    opacity: 1;
+    top: 80px;
+  }
+  80%{
+    opacity: 1;
+    top: 80px;
+  }
+  90%{
+    opacity: 1;
+    top: 80px;
+  }
+  100%{
+    opacity: 1;
+    top: 80px;
+  }
+}
+@keyframes msgShowHideImgBot {
+  0%{
+    opacity: 0;
+    top: 200px;
+  }
+  10%{
+    opacity: 0.5;
+  }
+  20%{
+    opacity: 1;
+    top: 120px;
+  }
+  30%{
+    opacity: 1;
+    top: 120px;
+  }
+  40%{
+    opacity: 1;
+    top: 120px;
+  }
+  50%{
+    opacity: 1;
+    top: 120px;
+  }
+  60%{
+    opacity: 1;
+    top: 120px;
+  }
+  70%{
+    opacity: 1;
+    top: 120px;
+  }
+  80%{
+    opacity: 1;
+    top: 120px;
+  }
+  90%{
+    opacity: 1;
+    top: 120px;
+  }
+  100%{
+    opacity: 1;
+    top: 120px;
+  }
+}
+
+
+.starMain{
+  :global{
+    .night-sky {  
+      background-color: #000000; /* 黑色背景 */  
+      position: fixed;  
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: -2;
+    }  
+      
+    .constellation {  
+      position: absolute;  
+    }  
+      
+    .constellation .star {  
+      position: absolute;  
+      width: 6px;  
+      height: 6px;  
+      background-color: #90CEE4; /* 淡青色 */  
+      border-radius: 50%;  
+      &:local{
+        animation: twinkle 3s infinite; /* 添加闪烁动画 */  
+      }
+    }  
+      
+    /* 北极星 */  
+    .constellation:nth-child(1) {  
+      top: 300px;  
+      left: 300px;  
+    }  
+    .constellation:nth-child(1) .star:nth-child(1) { top: 50px; left: 0px; }  
+    .constellation:nth-child(1) .star:nth-child(2) { top: 0px; left: 30px; }  
+    .constellation:nth-child(1) .star:nth-child(3) { top: 40px; left: 80px; }  
+    .constellation:nth-child(1) .star:nth-child(4) { top: 90px; left: 70px; }  
+    .constellation:nth-child(1) .star:nth-child(5) { top: 130px; left: 100px; }  
+    .constellation:nth-child(1) .star:nth-child(6) { top: 160px; left: 120px; }  
+    .constellation:nth-child(1) .star:nth-child(7) { top: 180px; left: 170px; }  
+    /*射手座 */  
+    .constellation:nth-child(2) {  
+      top: 500px;  
+      left: 650px;  
+    }  
+    .constellation:nth-child(2) .star:nth-child(1) { top: 45px; left: 60px; }  
+    .constellation:nth-child(2) .star:nth-child(2) { top: 40px; left: 50px; }  
+    .constellation:nth-child(2) .star:nth-child(3) { top: 30px; left: 80px; }  
+    .constellation:nth-child(2) .star:nth-child(4) { top: 40px; left: 90px; }
+    .constellation:nth-child(2) .star:nth-child(5) { top: 0px; left: 100px; }  
+    .constellation:nth-child(2) .star:nth-child(6) { top: 45px; left: 110px; }  
+    .constellation:nth-child(2) .star:nth-child(7) { top: 35px; left: 140px; }  
+    .constellation:nth-child(2) .star:nth-child(8) { top: 90px; left: 0px; }
+    .constellation:nth-child(2) .star:nth-child(9) { top: 110px; left: 10px; }  
+    .constellation:nth-child(2) .star:nth-child(10) { top: 90px; left: 20px; }  
+    .constellation:nth-child(2) .star:nth-child(11) { top: 90px; left: 90px; }  
+    .constellation:nth-child(2) .star:nth-child(12) { top: 60px; left: 100px; }
+    .constellation:nth-child(2) .star:nth-child(13) { top: 70px; left: 90px; }  
+    .constellation:nth-child(2) .star:nth-child(14) { top: 110px; left: 110px; }  
+    .constellation:nth-child(2) .star:nth-child(15) { top: 85px; left: 130px; }  
+    .constellation:nth-child(2) .star:nth-child(16) { top: 70px; left: 110px; }
+    .constellation:nth-child(2) .star:nth-child(17) { top: 80px; left: 140px; }  
+    .constellation:nth-child(2) .star:nth-child(18) { top: 70px; left: 145px; }  
+    .constellation:nth-child(2) .star:nth-child(19) { top: 110px; left: 150px; }  
+    // 白羊座
+    .constellation:nth-child(3) {  
+      top: 110px;  
+      left: 110px;  
+    } 
+    .constellation:nth-child(3) .star:nth-child(1) { top: 0; left: 0; }
+    .constellation:nth-child(3) .star:nth-child(2) { top: 25px; left: 35px; }  
+    .constellation:nth-child(3) .star:nth-child(3) { top: 45px; left: 55px; }  
+    .constellation:nth-child(3) .star:nth-child(4) { top: 60px; left: 60px; }  
+    // 巨蟹座
+    .constellation:nth-child(4) {  
+      top: 100px;  
+      left: 350px;  
+    } 
+    .constellation:nth-child(4) .star:nth-child(1) { top: 0; left: 40px; }
+    .constellation:nth-child(4) .star:nth-child(2) { top: 65px; left: 0px; }  
+    .constellation:nth-child(4) .star:nth-child(3) { top: 70px; left: 50px; }  
+    .constellation:nth-child(4) .star:nth-child(4) { top: 100px; left: 90px; }  
+    .constellation:nth-child(4) .star:nth-child(5) { top: 140px; left: 130px; }  
+    // 金牛座
+    .constellation:nth-child(5) {  
+      top: 450px;  
+      left: 130px;  
+    } 
+    .constellation:nth-child(5) .star:nth-child(1) { top: 0; left: 15px; }
+    .constellation:nth-child(5) .star:nth-child(2) { top: 35px; left: -5px; }  
+    .constellation:nth-child(5) .star:nth-child(3) { top: 40px; left: 45px; }  
+    .constellation:nth-child(5) .star:nth-child(4) { top: 70px; left: 60px; }  
+    .constellation:nth-child(5) .star:nth-child(5) { top: 78px; left: 58px; }  
+    .constellation:nth-child(5) .star:nth-child(6) { top: 82px; left: 65px; }
+    .constellation:nth-child(5) .star:nth-child(7) { top: 91px; left: 40px; }  
+    .constellation:nth-child(5) .star:nth-child(8) { top: 96px; left: 47px; }  
+    .constellation:nth-child(5) .star:nth-child(9) { top: 100px; left: 63px; }  
+    .constellation:nth-child(5) .star:nth-child(10) { top: 127px; left: 77px; }
+    .constellation:nth-child(5) .star:nth-child(11) { top: 150px; left: 110px; }  
+    .constellation:nth-child(5) .star:nth-child(12) { top: 155px; left: 112px; }  
+    // 天秤座
+    .constellation:nth-child(6) {  
+      top: 350px;  
+      right: 300px;  
+    } 
+    .constellation:nth-child(6) .star:nth-child(1) { top: 10px; left: 150px; }
+    .constellation:nth-child(6) .star:nth-child(2) { top: 30px; left: 30px; }  
+    .constellation:nth-child(6) .star:nth-child(3) { top: 40px; left: 80px; }  
+    .constellation:nth-child(6) .star:nth-child(4) { top: 110px; left: 160px; }  
+    .constellation:nth-child(6) .star:nth-child(5) { top: 170px; left: 0px; }  
+    .constellation:nth-child(6) .star:nth-child(6) { top: 160px; left: 10px; }
+    .constellation:nth-child(6) .star:nth-child(7) { top: 170px; left: 80px; }  
+    // 水平座
+    .constellation:nth-child(7) {  
+      top: 100px;  
+      right: 250px;  
+    } 
+    .constellation:nth-child(7) .star:nth-child(1) { top: 0; left: 110px; }
+    .constellation:nth-child(7) .star:nth-child(2) { top: 25px; left: 62px; }  
+    .constellation:nth-child(7) .star:nth-child(3) { top: 40px; left: 21px; }  
+    .constellation:nth-child(7) .star:nth-child(4) { top: 64px; left: 18px; }  
+    .constellation:nth-child(7) .star:nth-child(5) { top: 65px; left: 5px; }  
+    .constellation:nth-child(7) .star:nth-child(6) { top: 70px; left: 50px; }
+    .constellation:nth-child(7) .star:nth-child(7) { top: 75px; left: 0px; }  
+    .constellation:nth-child(7) .star:nth-child(8) { top: 115px; left: 55px; }  
+    .constellation:nth-child(7) .star:nth-child(9) { top: 75px; left: 75px; }  
+    .constellation:nth-child(7) .star:nth-child(10) { top: 110px; left: 30px; }
+    .constellation:nth-child(7) .star:nth-child(11) { top: 121px; left: 60px; }  
+    .constellation:nth-child(7) .star:nth-child(12) { top: 130px; left: 19px; } 
+    .constellation:nth-child(7) .star:nth-child(13) { top: 140px; left: 70px; } 
+    // 狮子座
+    .constellation:nth-child(8) {  
+      top: 200px;  
+      right: 750px;  
+    } 
+    .constellation:nth-child(8) .star:nth-child(1) { top: 0; left: 70px; }
+    .constellation:nth-child(8) .star:nth-child(2) { top: 0px; left: 88px; }  
+    .constellation:nth-child(8) .star:nth-child(3) { top: 40px; left: 60px; }  
+    .constellation:nth-child(8) .star:nth-child(4) { top: 58px; left: 70px; }  
+    .constellation:nth-child(8) .star:nth-child(5) { top: 60px; left: 91px; }  
+    .constellation:nth-child(8) .star:nth-child(6) { top: 80px; left: 110px; }
+    .constellation:nth-child(8) .star:nth-child(7) { top: 100px; left: 15px; }  
+    .constellation:nth-child(8) .star:nth-child(8) { top: 125px; left: 30px; }  
+    .constellation:nth-child(8) .star:nth-child(9) { top: 160px; left: 0px; }  
+    // 处女座
+    .constellation:nth-child(9) {  
+      top: 50px;  
+      right: 550px;  
+    } 
+    .constellation:nth-child(9) .star:nth-child(1) { top: 5px; left: 35px; }
+    .constellation:nth-child(9) .star:nth-child(2) { top: 25px; left: 0px; }  
+    .constellation:nth-child(9) .star:nth-child(3) { top: 45px; left: 10px; }  
+    .constellation:nth-child(9) .star:nth-child(4) { top: 40px; left: 54px; }  
+    .constellation:nth-child(9) .star:nth-child(5) { top: 50px; left: 0px; }  
+    .constellation:nth-child(9) .star:nth-child(6) { top: 65px; left: 55px; }
+    .constellation:nth-child(9) .star:nth-child(7) { top: 70px; left: 119px; }  
+    .constellation:nth-child(9) .star:nth-child(8) { top: 90px; left: 90px; }  
+    .constellation:nth-child(9) .star:nth-child(9) { top: 91px; left: 20px; }  
+    .constellation:nth-child(9) .star:nth-child(10) { top: 92px; left: 50px; }
+    .constellation:nth-child(9) .star:nth-child(11) { top: 110px; left: 80px; }  
+    .constellation:nth-child(9) .star:nth-child(12) { top: 130px; left: 95px; } 
+    .constellation:nth-child(9) .star:nth-child(13) { top: 145px; left: 120px; } 
+      
+
+    .starMallMain{
+      position: fixed;  
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: -1;
+      .starMall{
+        position: absolute;
+        border-radius: 50%;
+        background-color: #fff;
+        &:local{
+          animation: twinkle 3.5s infinite; /* 添加闪烁动画 */  
+        }
+      }
+    }
+  }
+}
+ 
+@keyframes twinkle {  
+  0% { opacity: 1; }  
+  50% { opacity: 0.5; }  
+  100% { opacity: 1; }  
+}
+
+@keyframes twinkle {  
+  0% { opacity: 1; }  
+  50% { opacity: 0.5; }  
+  100% { opacity: 1; }  
+}
