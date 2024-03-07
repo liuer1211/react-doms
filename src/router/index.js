@@ -22,8 +22,12 @@ const routerList = [
     component: lazy(()=> import('../pages/20231108'))
   },
   {
-    path: "/",
+    path: "/20231108",
     component: lazy(()=> import('../pages/20231108'))
+  },
+  {
+    path: "/",
+    component: lazy(()=> import('../pages/20240303'))
   }
 ]
 
