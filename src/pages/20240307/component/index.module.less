@@ -25,9 +25,9 @@
 
     .certify  .swiper-slide {
       width: 800px;
-      height: 640px;
-      background: #fff;
-      box-shadow: 0px 2px 12px #ddd;
+      height: 680px;
+      background: #c39c6b;
+      box-shadow: 0px 2px 12px #7e7e7e;
       border-radius: 8px;
       overflow: hidden;
     }
@@ -37,19 +37,39 @@
         .swiper-wrapper{
           .swiper-slide{
             &.swiper-slide-prev{
-              background: #d4ac79;
+              background: #6a6a6a;
               opacity: .3 !important;
               box-shadow: none;
             }
             &.swiper-slide-next{
-              background: #d4ac79;
+              background: #6a6a6a;
               opacity: .3 !important;
               box-shadow: none;
             }
             &.swiper-slide-active{
-            }
-            .cen{
-              padding: 12px;
+              .cen{
+                padding: 12px;
+                box-sizing: border-box;
+                width: 800px;
+                height: 680px;
+                font-size: 18px;
+                // transition: 1s;
+                // transform: scale(.8);
+                // transform-origin: top left;
+                position: relative;
+                .big{
+                  font-size: 26px;
+                  color: #ededed;
+                }
+                .pos{
+                  padding: initial;
+                  margin: initial;
+                  position: absolute;
+                  right: 12px;
+                  top: 12px;
+                  width: 270px;
+                }
+              }
             }
           }
         }
